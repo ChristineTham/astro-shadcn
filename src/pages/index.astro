@@ -1,0 +1,62 @@
+---
+import Layout from "@/layouts/main.astro"
+import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button-variants"
+import { cn } from "@/lib/utils"
+---
+
+<Layout>
+  <div class="flex min-h-svh flex-col items-center justify-center p-6 text-center">
+    <div class="flex max-w-2xl flex-col gap-6">
+      <header class="flex flex-col gap-2">
+        <h1 class="text-4xl font-bold tracking-tight sm:text-6xl text-balance">
+          Modern Web Template
+        </h1>
+        <p class="text-muted-foreground text-lg sm:text-xl text-balance">
+          A high-performance foundation built with the best modern tools.
+        </p>
+      </header>
+
+      <div class="grid grid-cols-1 gap-4 text-left sm:grid-cols-2">
+        <div class="rounded-2xl border p-4">
+          <h2 class="font-semibold italic">Framework & UI</h2>
+          <p class="text-muted-foreground text-sm">
+            Astro v6 with React v19 for seamless server and client interactivity.
+          </p>
+        </div>
+        <div class="rounded-2xl border p-4">
+          <h2 class="font-semibold italic">Components</h2>
+          <p class="text-muted-foreground text-sm">
+            shadcn/ui built on Base UI primitives for maximum accessibility.
+          </p>
+        </div>
+        <div class="rounded-2xl border p-4">
+          <h2 class="font-semibold italic">Styling</h2>
+          <p class="text-muted-foreground text-sm">
+            Tailwind CSS v4 for ultra-fast, modern utility-first CSS.
+          </p>
+        </div>
+        <div class="rounded-2xl border p-4">
+          <h2 class="font-semibold italic">Type Safety</h2>
+          <p class="text-muted-foreground text-sm">
+            Full TypeScript integration across the entire codebase.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <Button client:load size="lg">
+          Get Started
+        </Button>
+        <a
+          href="https://github.com/new"
+          target="_blank"
+          rel="noreferrer"
+          class={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
